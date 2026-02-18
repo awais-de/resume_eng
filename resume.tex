@@ -56,7 +56,7 @@
 
 % --- Section Title Formatting ---
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
+  \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 \pdfgentounicode=1
@@ -76,10 +76,10 @@
       \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
-\newcommand{\resumeProjectHeading}[1]{
+\newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \\
+      \small#1 & \textbf{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -110,25 +110,24 @@ Max-Planck-Ring 4, Ilmenau, Germany \\[4pt]
 \small 
 \href{tel:+4915731553605}{\raisebox{-0.1\height}\faPhone\ \underline{+49 1573 1553605}} ~ 
 \href{mailto:muhammadawais.de@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{muhammadawais.de@gmail.com}} ~ 
-\href{https://github.com/awais-de}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/awais-de}} ~
+\href{https://github.com/awais-de/portfolio}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/awais-de/portfolio}} ~
 \href{https://www.linkedin.com/in/mawaisds}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/mawaisds}}
 \vspace{4pt}
 \end{center}
 
 \section{Professional Profile}
-Analytically skilled Data Engineer with comprehensive experience in building, scaling, and operating end-to-end data pipelines in agile DevOps environments (Scrum/SAFe). Expert knowledge in developing batch and streaming architectures using Scala Spark, Delta Lake, and Kafka. Experienced in providing data products within Microsoft Fabric and Azure Data Lake Storage (ADLS) for analytics and Power BI reporting. Focus on performance optimization, GDPR-compliant data processing, and automation of CI/CD processes to reduce time-to-market.
+Seasoned Data Engineer specializing in building scalable data platforms and analytics ecosystems that enable reliable enterprise decision-making. Combines strong data engineering foundations with analytics and business intelligence expertise to deliver high-performance, quality-driven, and automation-enabled data solutions.
 
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
-  \item \textbf{Data Engineering \& Cloud:} \textbf{Microsoft Fabric (Lakehouse)}, Azure ADLS, \textbf{Scala Spark}, Spark SQL, \textbf{Delta Lake}, AWS (S3, EMR, Lambda)
-  
-  \item \textbf{Streaming \& Orchestration:} \textbf{Kafka}, Azure Event Hubs, \textbf{Apache Airflow} (workflow automation)
-  
-  \item \textbf{Databases \& Modeling:} \textbf{SQL}, MySQL, \textbf{Star-Schema Modeling}, DWH design, performance tuning
-  
-  \item \textbf{DevOps \& BI:} \textbf{GitLab CI} (build/deploy/test), Infrastructure as Code (IaC), Power BI, Power Query, monitoring/troubleshooting
-  
-  \item \textbf{Compliance \& Methodologies:} GDPR (anonymization), Agile frameworks (\textbf{Scrum, SAFe}), clean documentation
+    \item \textbf{Data Engineering \& Processing:} ETL/ELT Pipelines, Batch \& Streaming Processing, Apache Spark, Spark SQL, Delta Lake, Data Integration, Workflow Automation, Performance Optimization
+    \item \textbf{Streaming \& Orchestration:} Apache Kafka, Azure Event Hubs, Apache Airflow, Pipeline Scheduling, Event-Driven Processing
+    \item \textbf{Cloud \& Data Platforms:} Microsoft Fabric (Lakehouse), Azure Data Lake Storage (ADLS), AWS (S3, EMR, Lambda), Cloud Data Warehousing, Lakehouse Architectures
+    \item \textbf{Databases \& Data Modeling:} Advanced SQL, MySQL, Relational Databases, Dimensional Modeling, Star Schema, Data Warehouse Design, Query Tuning
+    \item \textbf{Analytics Engineering \& BI:} Power BI, Power Query, Semantic Modeling, Data Visualization, KPI Frameworks, Self-Service Analytics, Reporting Solutions
+    \item \textbf{DevOps \& Automation:} Git, GitLab CI/CD, Infrastructure as Code (IaC), Automated Deployments, Monitoring \& Troubleshooting
+    \item \textbf{Data Governance \& Compliance:} GDPR, Data Anonymization, Data Quality Frameworks, Documentation Standards, Metadata \& Lineage Practices
+    \item \textbf{Leadership \& Delivery:} Technical Mentoring, Stakeholder Collaboration, Cross-Functional Delivery, Agile Methodologies (Scrum, SAFe)
 \end{itemize}
 
 \section{Professional Experience}
@@ -163,21 +162,72 @@ Analytically skilled Data Engineer with comprehensive experience in building, sc
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
+\section{Projects}
+\resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{Deep Learning Audio Synthesis Pipeline (Master's Research)} $|$ \emph{PyTorch, AWS/GCP, Python}}{Oct 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Leading a 20-ECTS research initiative to architect a lossless audio coding and synthesis framework using \textbf{Deep Neural Networks} (WaveNet/CNNs).}
+        \resumeItem{Engineered a cloud-based training infrastructure, managing remote GPU instances via \textbf{SSH} and automating experiment tracking (checkpoints/logs) for reproducibility.}
+        \resumeItem{Developed complex data ingestion pipelines to process large-scale audio datasets, optimizing tensor operations for high-performance model training.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Real-Time Neural Audio Streaming Engine} $|$ \emph{Python, Transformers, Socket API}}{Oct 2025}
+      \resumeItemListStart
+        \resumeItem{Designed a low-latency ($<$20ms) audio transmission system using \textbf{Socket programming}, enabling real-time streaming between distributed nodes.}
+        \resumeItem{Implemented a Transformer-based bottleneck architecture to compress audio streams to 8-16 kbps, optimizing bandwidth usage without significant quality loss.}
+        \resumeItem{Programmed quantization and de-quantization modules in Python to handle efficient data packetization and reconstruction in real-time environments.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{EDC Prediction System (Hybrid CNN-LSTM)} $|$ \emph{Python, Time-Series Analysis}}{Apr 2025 -- Sep 2025}
+      \resumeItemListStart
+        \resumeItem{Developed a hybrid neural network architecture combining \textbf{CNNs} (feature extraction) and \textbf{LSTMs} (temporal dependencies) for complex signal forecasting.}
+        \resumeItem{Processed high-dimensional sensor data using advanced digital signal processing techniques to improve predictive accuracy for energy distribution curves.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Text-to-Sign Language Translation System} $|$ \emph{Python, Signal Processing}}{Oct 2024 -- Mar 2025}
+      \resumeItemListStart
+        \resumeItem{Engineered an algorithmic translation layer using \textbf{Multirate Signal Processing} techniques to map textual input to sign language gesture sequences.}
+        \resumeItem{Optimized Python-based classification routines to evaluate and synthesize motion data, ensuring accurate temporal alignment of generated signals.}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Certifications}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \item \textbf{Microsoft Azure Data Fundamentals (DP-900)} $|$ \emph{Microsoft}
+    \item \textbf{Teradata Vantage Certified Professional} $|$ \emph{Teradata}
+    \item \textbf{Enterprise BI Development with Oracle BI (OBIEE)}
+\end{itemize}
 
 \section{Education}
 \resumeSubHeadingListStart
+
   \resumeSubheading
-    {TU Ilmenau}{Ongoing}
-    {M.Sc. Research in Media Engineering}{Ilmenau, Germany}
+    {Technische Universität Ilmenau}{Ilmenau, Germany}
+    {M.Sc. Research in Media Engineering (Current Grade: 2.3)}{Oct. 2025 -- Present}
+    \resumeItemListStart
+        \resumeItem{\textbf{Data Engineering Focus:} Advanced Database Systems (Query Optimization, B-Trees/Indexing, Transaction Processing, Relational Algebra), Software Architecture \& Systems Engineering.}
+        \resumeItem{\textbf{AI \& Analytics:} Statistical Analysis, Deep Learning Architectures (LSTM, CNN), and Python-based Signal Processing.}
+    \resumeItemListEnd
+
   \resumeSubheading
-    {National Textile University}{Graduated: 2020, GPA: 1.9 (German scale)}
-    {B.Sc. Software Engineering}{Faisalabad, Pakistan}
+    {National Textile University}{Faisalabad, Pakistan}
+    {B.Sc. Software Engineering (Grade: 1.9)}{2016 -- 2020}
+    \resumeItemListStart
+        \resumeItem{\textbf{Focus:} Data Structures \& Algorithms, Artificial Intelligence, Data Science.}
+        \resumeItem{\textbf{Final Year Project:} ORB -- Automated Biometric Identification \& Distributed Security System.}
+    \resumeItemListEnd
+
 \resumeSubHeadingListEnd
 
 \section{Languages}
 \begin{itemize}[leftmargin=0.15in, label={}]
-  \item English (Fluent) 
-  \item German (Fluent)
+    \item English (C2) $\bullet$ German (B2) $\bullet$ Urdu/Hindi (Native) $\bullet$ Punjabi (Native)
 \end{itemize}
 
 \end{document}
