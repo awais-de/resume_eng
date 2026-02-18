@@ -1,0 +1,183 @@
+\documentclass[letterpaper,11pt]{article}
+
+% --- Essential Packages ---
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[german]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+\usepackage{array}
+\input{glyphtounicode}
+
+% --- Font and Encoding Improvements ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+% --- Color Definitions ---
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% --- Page Layout Tweaks ---
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+% --- Hyperlink Style ---
+\urlstyle{same}
+
+% --- Misc Tweaks ---
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% --- Section Title Formatting ---
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% --- Custom Resume Commands ---
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[1]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% --- List Environments ---
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}} } 
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}} 
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]} 
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% --- Main Document ---
+\begin{document}
+
+\begin{center}
+\vspace{6pt}
+\noindent
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{0}
+\begin{tabular}{@{}p{2.5cm}@{}l@{}}
+    \raisebox{0pt}[3cm][0pt]{\includegraphics[width=2.5cm,height=3cm,keepaspectratio]{image.jpg}} &
+    \hspace{4pt}
+    \raisebox{1.3cm}{\Huge \scshape Muhammad Awais}
+\end{tabular}\\[6pt]
+Max-Planck-Ring 4, Ilmenau, Germany \\[4pt]
+\small 
+\href{tel:+4915731553605}{\raisebox{-0.1\height}\faPhone\ \underline{+49 1573 1553605}} ~ 
+\href{mailto:muhammadawais.de@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{muhammadawais.de@gmail.com}} ~ 
+\href{https://github.com/awais-de}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/awais-de}} ~
+\href{https://www.linkedin.com/in/mawaisds}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/mawaisds}}
+\vspace{4pt}
+\end{center}
+
+\section{Professional Profile}
+Analytically skilled Data Engineer with comprehensive experience in building, scaling, and operating end-to-end data pipelines in agile DevOps environments (Scrum/SAFe). Expert knowledge in developing batch and streaming architectures using Scala Spark, Delta Lake, and Kafka. Experienced in providing data products within Microsoft Fabric and Azure Data Lake Storage (ADLS) for analytics and Power BI reporting. Focus on performance optimization, GDPR-compliant data processing, and automation of CI/CD processes to reduce time-to-market.
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item \textbf{Data Engineering \& Cloud:} \textbf{Microsoft Fabric (Lakehouse)}, Azure ADLS, \textbf{Scala Spark}, Spark SQL, \textbf{Delta Lake}, AWS (S3, EMR, Lambda)
+  
+  \item \textbf{Streaming \& Orchestration:} \textbf{Kafka}, Azure Event Hubs, \textbf{Apache Airflow} (workflow automation)
+  
+  \item \textbf{Databases \& Modeling:} \textbf{SQL}, MySQL, \textbf{Star-Schema Modeling}, DWH design, performance tuning
+  
+  \item \textbf{DevOps \& BI:} \textbf{GitLab CI} (build/deploy/test), Infrastructure as Code (IaC), Power BI, Power Query, monitoring/troubleshooting
+  
+  \item \textbf{Compliance \& Methodologies:} GDPR (anonymization), Agile frameworks (\textbf{Scrum, SAFe}), clean documentation
+\end{itemize}
+
+\section{Professional Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Razor Group GmbH}{Nov 2023 -- Jun 2024} 
+    {Data Engineer}{Berlin, Germany}
+    \resumeItemListStart
+      \resumeItem{Development of scalable batch and streaming pipelines for integrating Amazon Seller Central data (87 GB daily) using \textbf{Scala Spark} and \textbf{Delta Lake}.}
+      \resumeItem{Migration and optimization of data flows towards \textbf{Microsoft Fabric Lakehouse}, improving data availability for real-time inventory queries.}
+      \resumeItem{Automation of ETL processes with \textbf{Airflow} and \textbf{GitLab CI}, reducing manual effort by 30\% and lowering error rates through automated tests.}
+      \resumeItem{Ensuring data quality and implementing anonymization techniques to comply with \textbf{GDPR guidelines}.}
+    \resumeItemListEnd  
+
+  \resumeSubheading
+    {Teradata}{Jan 2023 -- Oct 2023} 
+    {Data Engineer}{Islamabad, Pakistan}
+    \resumeItemListStart
+      \resumeItem{Responsible for designing and maintaining DWH models (Star-Schema) in \textbf{MySQL} and Teradata Vantage, reducing ad-hoc queries via self-service analytics by 45\% .}
+      \resumeItem{Implementation of ingestion pipelines for streaming data using \textbf{Kafka}, including monitoring and troubleshooting to ensure stable operations.}
+      \resumeItem{Performance tuning and identification of optimization potentials to reduce operating costs and improve time-to-market.}
+    \resumeItemListEnd    
+
+  \resumeSubheading
+    {NETSOL Technologies}{Nov 2020 -- Dec 2022} 
+    {Data Engineer}{Lahore, Pakistan}
+    \resumeItemListStart
+      \resumeItem{Administration of high-volume OLTP systems and optimization of complex \textbf{SQL} queries, reducing processing time by 15\% .}
+      \resumeItem{Building data feeds for over 220 \textbf{Power BI} reports and developing validation frameworks to increase data quality from 69\% to 88\% .}
+      \resumeItem{Contribution in an agile \textbf{Scrum} team to the migration of large datasets into Enterprise Data Warehouse environments.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {TU Ilmenau}{Ongoing}
+    {M.Sc. Research in Media Engineering}{Ilmenau, Germany}
+  \resumeSubheading
+    {National Textile University}{Graduated: 2020, GPA: 1.9 (German scale)}
+    {B.Sc. Software Engineering}{Faisalabad, Pakistan}
+\resumeSubHeadingListEnd
+
+\section{Languages}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item English (Fluent) 
+  \item German (Fluent)
+\end{itemize}
+
+\end{document}
